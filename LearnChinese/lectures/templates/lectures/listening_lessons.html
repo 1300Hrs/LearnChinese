@@ -1,0 +1,24 @@
+{% extends 'features/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %} Listening  n Reading {% endblock title %}
+{% block content %}
+
+    {% for l_lesson in l_lessons %}
+        <div class="card" style="width: 25rem;">
+            <img src="{{ l_lesson.image.url }}" style="height: 150px;" class="img-fluid" alt="...">
+            <div class="card-body">
+              <p class="card-text">{{ l_lesson.phrase }}</p>
+              <p class="card-text">{{ l_lesson.hanzi }}</p>
+              <p class="card-text">{{ l_lesson.yingzi}}</p>
+              {% if l_lesson.audio_clip %}
+              <audio controls>
+                  <source src="{{ l_lesson.audio_clip.url }}" type="audio/mpeg">
+                  Your browser does not support the audio element.
+              </audio>
+              {% endif %}
+              <p> Uploaded: {{ reading.created_at | timesince }} ago</p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock content %}

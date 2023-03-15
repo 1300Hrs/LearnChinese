@@ -1,0 +1,11 @@
+{% extends 'features/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %} LogIn {% endblock title %}
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form | crispy }}
+        <button class="btn btn-primary">Sign In</button>
+    </form>
+    Need an Acoount? <a href="{% url 'register' %}" class="btn btn-outline-primary">Sign Up</a>
+{% endblock content %}

@@ -1,0 +1,6 @@
+{% extends 'features/base.html' %}
+{% block title %} Logout {% endblock title %}
+{% block content %}
+    <p>You've been Logged Out</p>
+    <a href="{% url 'login' %}" class="btn btn-primary">Log In Again</a>
+{% endblock content %}

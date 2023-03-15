@@ -1,0 +1,26 @@
+{% extends 'features/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %} Reading {% endblock title %}
+{% block content %}
+    {% for reading in readings %}
+    <div class="row mb-2">
+        <div class="col-md-8 offset-md-2 border rounded-2">
+            <h2>{{ reading.title }}</h2>
+            <p><strong>Lesson:</strong> {{ reading.lesson }}</p>
+            <p><strong></strong> {{ reading.chinese_characters }}</p>
+        </div>
+    </div>
+    <div class="row mb-2">
+        <div class="col-md-8 offset-md-2 border rounded-2">
+            <p>In Case You are having difficulties understanding the Reading, Refer to the Audi clip Below</p>
+            {% if reading.audio_clip %}
+            <audio controls>
+                <source src="{{ reading.audio_clip.url }}" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            {% endif %}
+            <p> Uploaded: {{ reading.created_at | timesince }} ago</p>
+        </div>
+    </div>         
+    {% endfor %}
+{% endblock content %}

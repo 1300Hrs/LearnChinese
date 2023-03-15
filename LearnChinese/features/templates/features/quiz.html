@@ -1,0 +1,26 @@
+{% extends 'features/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %} Quiz {% endblock title %}
+{% block content %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="card-title">{{ quiz.title }}</h3>
+                        <p class="card-subtitle">{{ quiz.description }}</p>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST">
+                            {% csrf_token %}
+                            {{ form|crispy }}
+                            <div class="mt-4 text-center">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,83 @@
+{% extends 'features/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %} Courses {% endblock title %}
+{% block content %}
+
+    
+    <h3>OUR RECOMMENDED COURSES</h3>
+    <p class="lead ">Learn Several Topics made specially for you</p>
+
+    <div class="container">
+        <div class="row">
+          <div class="col-md-4 my-3 ">
+            <div class="card align-items-center">
+              <div class="card-body">
+                <i class="bi bi-journals"></i>
+                <h5 class="card-title">Reading</h5>
+                <p class="card-text">This iTThis is tThis is the first card.hThis is tThis is the first card.he first card.e first card.This is tThis is the first card.he first card.his is tThis is the first card.he first card.s tThis is the first card.he first card.</p>
+                <a href="{% url  'reading' %}" class="btn btn-outline-primary">Reading Lessons</a>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 my-3">
+            <div class="card align-items-center">
+              <div class="card-body">
+                <i class="bi bi-ear"></i>
+                <h5 class="card-title">Listening</h5>
+                <p class="card-text">This iTThis is tThis is the first card.hThis is tThis is the first card.he first card.e first card.This is tThis is the first card.he first card.his is tThis is the first card.he first card.s tThis is the first card.he first card.</p>
+                <a href="{% url  'listening' %}" class="btn btn-outline-primary">Learning Lessons</a>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 my-3">
+            <div class="card align-items-center">
+              <div class="card-body">
+                <i class="bi bi-vector-pen"></i>
+                <h5 class="card-title">Writing Practice</h5>
+                <p class="card-text">This iTThis is tThis is the first card.hThis is tThis is the first card.he first card.e first card.This is tThis is the first card.he first card.his is tThis is the first card.he first card.s tThis is the first card.he first card.</p>
+                <a href="#writingLessons" class="btn btn-outline-primary">Writing Lessons</a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card align-items-center">
+              <div class="card-body">
+                <i class="bi bi-emoji-laughing"></i>
+                <h5 class="card-title">Fun Stories</h5>
+                <p class="card-text">This iTThis is tThis is the first card.hThis is tThis is the first card.he first card.e first card.This is tThis is the first card.he first card.his is tThis is the first card.he first card.s tThis is the first card.he first card.</p>
+                <a href="#funStories" class="btn btn-outline-primary">View Stories</a>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card align-items-center">
+              <div class="card-body">
+                <i class="bi bi-pencil"></i>
+                <h5 class="card-title">Writing Lessons</h5>
+                <p class="card-text">This iTThis is tThis is the first card.hThis is tThis is the first card.he first card.e first card.This is tThis is the first card.he first card.his is tThis is the first card.he first card.s tThis is the first card.he first card.</p>
+                <a href="#writingLessons" class="btn btn-outline-primary">Writing Lessons</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card align-items-center">
+              <div class="card-body">
+                <i class="bi bi-play-btn"></i>
+                <h5 class="card-title">Video Lessons</h5>
+                <p class="card-text">This iTThis is tThis is the first card.hThis is tThis is the first card.he first card.e first card.This is tThis is the first card.he first card.his is tThis is the first card.he first card.s tThis is the first card.he first card.</p>
+                <a href="#videoLessons" class="btn btn-outline-primary">Video Lessons</a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+{% endblock content %}

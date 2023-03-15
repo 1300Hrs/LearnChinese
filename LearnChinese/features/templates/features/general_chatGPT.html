@@ -1,0 +1,22 @@
+{% extends 'features/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %} chatGPT {% endblock title %}
+{% block content %}
+    <label for="source-text">Enter text or Instruction:</label>
+    <form action="" method="post">
+        {% csrf_token %}
+        <button class="btn btn-outline-success my-2">Submit</button>
+    </form>
+
+    <label for="translated-text">Output:</label>
+    <div class="card mb-3">
+    <div class="card-body" id="translated-text">
+        {% if response %}
+        <div>
+            {{ response | safe }}
+        </div>
+        {% endif %}
+    </div>
+    </div>
+    </div>
+{% endblock content %}

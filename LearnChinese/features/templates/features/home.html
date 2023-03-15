@@ -1,0 +1,309 @@
+{% extends 'features/base.html' %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+{% block content %}
+    <!-- main image and intro text -->
+    <section id="intro">
+        <div class="container-lg">
+            <!-- <a href="#publichQNS" class="btn btn-outline-success">Compose Quiz</a> -->
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-5 text-center text-md-start">
+                    <h1>
+                        <div class="display-2">Black Belt </div>
+                        <div class="display-5 text-muted">Your Chinese skills</div>
+                    </h1>
+                    <!-- Putting in the seacrh form -->
+                    <p class="lead my-3 text-muted">what do you want to Learn?what do you want to Learn?what do you want to Learn?what do you want to Learn?what do you want to Learn?what do you want to Learn?what do you want to Learn?what do you want to Learn?</p>
+                    <!-- <label for="exampleDataList" class="form-label">Available Courses</label> -->
+                    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="What do you want to learn?..."> 
+                    <button class="btn btn-primary my-2">Search</button>
+                    <datalist id="datalistOptions">
+                        <option value="Reading">
+                        <option value="Writing">
+                        <option value="Listening">
+                        <option value="ChatGPT">
+                        <option value="Learn Poems">
+                    </datalist>
+
+                </div>
+                <div class="col-md-5 text-center d-none d-md-block">
+                    <!-- tool tip -->
+                    <span clas="tt">
+                        <img src="{% static 'features/ninjadude.png' %}" alt="Ninja" class="img-fluid" data-bs-placement="bottom" title="Just a pic i took from a dude online ">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- topics at a glance -->
+    <section id="courses">
+        <div class="container-md">
+            <div class="text-center">
+                <h2>COURSES AVAILABLE</h2>
+                <p class="lead text-muted">
+                    A Quick Glance at the topics you will learn. 
+                    I love to call it the QUICKIE GLANCE 
+                </p>
+            </div>
+            <div class="row my-5 g-5 justify-content-around align-items-center">
+                <div class="col-6 col-lg-4">
+                    <img src="{% static 'features/scifishit.png' %}" alt="#sth" clas="img-fluid">
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- Accordion -->
+                    <div class="accordion" id="chapters">
+                        <div class="accordion-item">
+                            <!-- Accordion 01 -->
+                            <h2 class="accordion-header" id="heading-1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#chapter-1" aria-expanded="true" aria-controls="chapter-1">
+                                    chapter 1: Lesson Modules
+                                </button>
+                            </h2>
+                            <div id="chapter-1" class="accordion-collapse collapse show" data-bs-parent="#chapters">
+                                <div class="accordion-body">
+                                    <p>Break down the learning material into modules that can be easily understood by learners. Each module should be focused on a specific topic and include explanations, examples, and practice exercises.!</p>
+                                    <a href= "{% url 'courses_home' %}" class="btn btn-primary">Check Out the Modules</a>
+
+
+                                </div>
+                            </div>
+
+                            <!-- Accordion 02 -->
+                            <h2 class="accordion-header" id="heading-2">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#chapter-2" aria-expanded="true" aria-controls="chapter-2">
+                                    chapter 2: Vocabulary Lists
+                                </button>
+                            </h2>
+                            <div id="chapter-2" class="accordion-collapse collapse" data-bs-parent="#chapters">
+                                <div class="accordion-body">
+                                    <p>Create lists of essential vocabulary words and phrases related to the language learners are studying. You could categorize the words based on their difficulty level and frequency of use.</p>
+                                </div>
+                            </div>
+
+                            
+                            <!-- Accordion 03 -->
+                            <h2 class="accordion-header" id="heading-3">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#chapter-3" aria-expanded="true" aria-controls="chapter-3">
+                                    chapter 3: Practice Quizzes
+                                </button>
+                            </h2>
+                            <div id="chapter-3" class="accordion-collapse collapse" data-bs-parent="#chapters">
+                                <div class="accordion-body">
+                                    <p>Design quizzes to test learners' knowledge and comprehension of the language they are studying. You could use multiple-choice, fill-in-the-blank, or matching questions.</p>
+                                    <a href= "{% url 'quiz' quiz_id=1 %}" class="btn btn-primary">View Quiz</a>
+                                </div>
+                            </div>
+
+                            
+                            <!-- Accordion 04 -->
+                            <h2 class="accordion-header" id="heading-4">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#chapter-4" aria-expanded="true" aria-controls="chapter-4">
+                                    chapter 4: Interactive Exercises: 
+                                </button>
+                            </h2>
+                            <div id="chapter-4" class="accordion-collapse collapse" data-bs-parent="#chapters">
+                                <div class="accordion-body">
+                                    <p>Create interactive exercises that allow learners to practice their language skills in a fun and engaging way. These could include speaking exercises, listening exercises, and writing exercises.</p>
+                                </div>
+                            </div>
+
+                            
+                            <!-- Accordion 05-->
+                            <h2 class="accordion-header" id="heading-5">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#chapter-5" aria-expanded="true" aria-controls="chapter-5">
+                                    chapter 5: Progress Tracking
+                                </button>
+                            </h2>
+                            <div id="chapter-5" class="accordion-collapse collapse" data-bs-parent="#chapters">
+                                <div class="accordion-body">
+                                    <p>Incorporate a progress tracking system that enables learners to track their progress over time. You could include a dashboard that displays their scores, completed modules, and time spent studying.</p>
+                                </div>
+                            </div>
+
+                            <!-- Accordion 06-->
+                            <h2 class="accordion-header" id="heading-5">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#chapter-6" aria-expanded="true" aria-controls="chapter-6">
+                                    chapter 6: Feedback System
+                                </button>
+                            </h2>
+                            <div id="chapter-6" class="accordion-collapse collapse" data-bs-parent="#chapters">
+                                <div class="accordion-body">
+                                    <p>Provide learners with immediate feedback on their progress and performance. This feedback can be in the form of suggestions for improvement, correction of mistakes, and positive reinforcement.</p>
+                                </div>
+                            </div>
+
+                            <!-- Accordion 07-->
+                            <h2 class="accordion-header" id="heading-5">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#chapter-7" aria-expanded="true" aria-controls="chapter-7">
+                                    chapter 7: Multimedia Integration
+                                </button>
+                            </h2>
+                            <div id="chapter-7" class="accordion-collapse collapse" data-bs-parent="#chapters">
+                                <div class="accordion-body">
+                                    <p>Integrate multimedia elements like audio and video to help learners develop their listening and speaking skills. This could include audio recordings of native speakers, videos of real-life conversations, and interactive voice recognition technology. </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Accordion 08-->
+                            <h2 class="accordion-header" id="heading-5">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#chapter-8" aria-expanded="true" aria-controls="chapter-8">
+                                    chapter 8: soial Features
+                                </button>
+                            </h2>
+                            <div id="chapter-8" class="accordion-collapse collapse" data-bs-parent="#chapters">
+                                <div class="accordion-body">
+                                    <p>
+                                        Incorporate social features like forums, chat rooms, and online groups to help learners connect with other learners and practice their language skills together. You could also include the ability to connect with language tutors or teachers for personalized guidance and support.
+                                        By including these features in your platform, you can create a comprehensive and engaging language learning experience for your learners.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact form -->
+    <section id="contacts">
+        <div class="container-lg">
+            <div class="text-center">
+                <h2>Get in Touch</h2>
+                <p class="lead"> Questions to ask? Fill out the form to contact me directly </p>
+            </div>
+            <div class="row justify-content-center my-5">
+                <div class="col-lg-6">
+                    <form>
+                        <!-- email -->
+                        <label for="email" class="form-label">Email address</label>
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-envelope-at-fill"></i>
+                            </span>
+                            <input type="email" id="email" class="form-control" placeholder="i.e wicca1300Hrs@gmail.com">
+                            <!-- tooltip -->
+                            <span class="input-group-text" data-bs-placment="bottom" title="Enter a vald email address">
+                                <span class="tt">
+                                    <i class="bi bi-question-circle text-muted"></i>
+                                </span>
+                            </span>
+                        </div>
+                        
+                        <!-- Name -->
+                        <label for="name" class="form-label">Name:</label>
+                        <div class="mb-4 input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-person-fill"></i>
+                            </span>
+                            <input type="text" id="name" class="form-control" placeholder="i.e wicca">
+                        </div>
+
+                        <!-- subject -->
+                        <label for="subject" class="form-label">What's your question about?</label>
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-chat-square-dots"></i>
+                            </span>
+                            <select id="subject" class="form-select">
+                                <option value="pricing" selected>Pricing querry</option>
+                                <option value="content">content Query</option>
+                                <option value="other">other query</option>
+                            </select>
+                        </div>
+
+
+                        <div class="form-floating my-4">
+                            <textarea id="query"  class="form-control" style="height: 140px"></textarea>
+                            <label for="query"> Your Query...</label>
+                        </div>
+
+                        <div class="mb-4 text-center">
+                            <button type="submit" class="btn btn-secondary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get updates / modal trigger -->
+    <section class="bg-light">
+        <div class="container">
+            <div class="text-center">
+                <h2>Stay at the Top </h2>
+                <p class="lead">Get the latest updates as they happen...</p>
+                <div class="row justify-content-center">
+                    <div class="col-md-8 text-center">
+                        <p class="text-muted my-4">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni non tenetur aliquid quas! Assumenda ab neque reiciendis facilis sit illo, quidem placeat quibusdam minus! Accusantium esse voluptatibus inventore ea voluptate?
+                        </p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reg-modal">Register for updates</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- modal itself -->
+    <div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true"> 
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title">Get the latest Updates</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                </div>
+                <!-- body -->
+                <div class="modal-body">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem aliquam odio distinctio? Consectetur provident, assumenda placeat temporibus cumque voluptatem, aut quisquam deleniti non nostrum explicabo. Eius, neque ipsum! Dolorum, rem!</p>
+                    <label for="modal-email" class="form-label">Your Email Address</label>
+                    <input type="text"  id="modal-email" class="form-control" placeholder="wiccasth@gmail.com">
+                </div>
+                <!-- footer -->
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Off Canvas -->
+    <div class="offcanvas offcanvas-start" id="sidebar" tabindex="-1" aria-labelledby="sidebar-label">
+        <!-- Offcanvas Header -->
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="sidebar-label">My Other Books</h5>
+            <button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <!-- Offcanvas Body -->
+        <div class="offcanvas-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis magnam hic itaque ratione quia dignissimos iure deleniti consequuntur sequi nisi, delectus ipsam. Ex optio dolorum quis incidunt quam ea molestiae.</p>
+
+            <!-- Drop down -->
+            <div class="dropdown mt-3"> 
+                <button class="btn btn-secondary dropdown-toggle" id="book-dropdown" data-bs-toggle="dropdown">
+                    Choose A book title
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="book-dropdown">
+                    <li><a href="#" class="dropdown-item">Become a React SuperHero</a></li>
+                    <li><a href="#" class="dropdown-item">Conquering VueJS</a></li>
+                    <li><a href="#" class="dropdown-item">Level Up your Django Skills</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

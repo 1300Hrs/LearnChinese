@@ -1,0 +1,66 @@
+{% extends 'features/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %} Translation {% endblock title %}
+{% block content %}
+    <!-- Reviews list -->
+    <section id="reviews" class="bg-light">
+        <div class="container-lg">
+            <div class="text-center">
+                <h2>
+                    <i class="bi bi-stars"></i>
+                    Course Reviews
+                </h2>
+                <p class="lead">What students say about us</p>   
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="list-group">
+                        <!-- Review 01 -->
+                        <div class="list-group-item py-3">
+                            <div class="pb-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                            </div>
+                            <h5 class="mb-1">A must buy for every aspiring Business person based in Chinar</h5>
+                            <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quis ipsa debitis eius nemo exercitationem nesciunt deleniti odit reiciendis modi! Nulla quos labore, laboriosam distinctio aliquid doloremque blanditiis. Tempore, maxime!</p>
+                            <small class=" text-info">Alpha</small>
+                        </div>
+                        <!-- Review 02 -->
+                        <div class="list-group-item py-3">
+                            <div class="pb-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                            </div>
+                            <h5 class="mb-1">I did not know any chinese last year but LOOK AT ME NOW, A jourbalist at the China National News (CNN).</h5>
+                            <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quis ipsa debitis eius nemo exercitationem nesciunt deleniti odit reiciendis modi! Nulla quos labore, laboriosam distinctio aliquid doloremque blanditiis. Tempore, maxime!</p>
+                            <small class=" text-info">Aneth</small>
+                        </div>
+                        <!-- Review 03 -->
+                        <div class="list-group-item py-3">
+                            <div class="pb-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <h5 class="mb-1">I only got a grasp of everything after i paid for the exclusive package 1-o-1 with the tutors</h5>
+                            <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quis ipsa debitis eius nemo exercitationem nesciunt deleniti odit reiciendis modi! Nulla quos labore, laboriosam distinctio aliquid doloremque blanditiis. Tempore, maxime!</p>
+                            <small class=" text-info">Wicca</small>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+{% endblock content %}
